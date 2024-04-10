@@ -1,3 +1,4 @@
+.SILENT:
 GXX = g++
 
 GXX_FLAGS = -g -Wno-return-type
