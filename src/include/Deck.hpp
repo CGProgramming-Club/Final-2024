@@ -1,10 +1,16 @@
 #ifndef Deck_hpp
 #define Deck_hpp
 #include <iostream>
+#include <string>
+
 
 namespace Deck {
-  class calculator {
+  Class card {
       public:
+        string suit = "";
+        string name ="";
+    
+    
   
 
 
