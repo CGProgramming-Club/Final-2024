@@ -1,4 +1,4 @@
-#include "../include/Games.hpp"
+#include "include/Games.hpp"
 
 namespace final {
     //Gambling stuff but defined
