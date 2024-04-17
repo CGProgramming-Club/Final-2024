@@ -34,5 +34,4 @@ build
 
 # Replit
 .ccls-cache
-.replit
 replit.nix
