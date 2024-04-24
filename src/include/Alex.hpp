@@ -2,16 +2,31 @@
 #define ALEX_HPP
 #include <iostream>
 
-// namespace final {
+namespace final {
+  class Alex{
+    public:
+      Alex(bool, bool, int, int, int, int, int, std::string);
+      void rules();
+      void hit();
+      void stay();
+      void start();
+      void scores();
+      void bet();
+  
+    private:
+      bool Agame = true;
+      bool Atf = true;
+      int Apscore;
+      int Adscore;
+      int Achips = 50;
+      int Abjlevel = 1;
+      int Abet;
+      std::string Arule;
+
+
+  
+  };
 //   //Unless you wanna make multiple variations of blackjack, I would just recommend a couple functions that allows the player to play blackjack, rather than a whole class. --Aiden P
-// bool game = true;
-// bool tf = true;
-// int pscore = 0;
-// int dscore = 0;
-// int chips = 50;
-// int bjlevel = 0;
-// int cbet = 0;
-// std::string rule;
 // while(game == true){
 // std::cout<<"Welcome to Blackjack!\nYou currently have " << chips << " Chips, and you are level " << bjlevel << ". Would you like to know the basic rules? (Y/N)\n";
 //   while(tf == true){
@@ -25,5 +40,32 @@
   
 // }
   
-// }
+}; // namespace Alex
+
+
+Alex::Alex(bool game, bool tf, int pscore, int dscore, int chips, int bjlevel, int bet, std::string rule){
+  Agame = game;
+  Atf = tf;
+  Apscore = pscore;
+  Adscore = dscore;
+  Achips = chips;
+  Abjlevel = bjlevel;
+  Abet = bet;
+  Arule = rule;
+
+  
+}
+
+//functions
+void Alex::start(){
+  std::cout<<"Welcome to Blackjack!\nYou currently have " << chips << " Chips, and you are level " << bjlevel << ". Would you like to know the basic rules? (Y/N)\n";
+  while(Atf == true){
+    std::cin>>rule;
+    if(rule == "Y" || rule == "y"){
+      rule = "Y";
+    }
+    else if(rule = "N" || rule == "n"){
+      rule = "N";
+    }
+}
 #endif
