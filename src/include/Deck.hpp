@@ -5,15 +5,16 @@
 
 
 namespace Deck {
-  Class card {
+  class Cards {
       public:
-        string suit = "";
-        string name ="";
-    
-    
-  
+        std::string suit ();
+        std::string name ();
 
 
-  
+
+
+
+
 };
 }
+#endif
