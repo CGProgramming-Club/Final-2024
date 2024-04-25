@@ -1,5 +1,5 @@
-#ifndef Deck_hpp
-#define Deck_hpp
+#ifndef DECK_HPP
+#define DECK_HPP
 #include <iostream>
 #include <string>
 
