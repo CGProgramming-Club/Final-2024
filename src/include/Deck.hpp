@@ -4,7 +4,7 @@
 #include <string>
 
 
-namespace Deck {
+namespace final {
   class Cards {
       public:
         std::string suit ();
