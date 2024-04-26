@@ -5,7 +5,7 @@
 std::string numbers [13] = {"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
 std::string suits [4] ={"Hearts","Diamonds","Spades","Clubs"};
 
-namespace Deck {
+namespace final {
 
 
    std::string Cards::suit(){
