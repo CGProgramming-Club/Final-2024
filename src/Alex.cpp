@@ -14,8 +14,8 @@ namespace final {
     // int suite = rand() %4+1;
 
     // }
-    
-    Alex::Alex(bool game, bool tf, int pscore, int dscore, int chips, int bjlevel, int bet, std::string rule){
+
+    Alex::Alex(bool game, bool tf, int pscore, int dscore, int chips, int bjlevel, int bet, char rule){
       Agame = game;
       Atf = tf;
       Apscore = pscore;
@@ -28,14 +28,15 @@ namespace final {
 
     //functions
     void Alex::start(){
-      std::cout<<"Welcome to Blackjack!\nYou currently have " << chips << " Chips, and you are level " << bjlevel << ". Would you like to know the basic rules? (Y/N)\n";
+      std::cout<<"Welcome to Blackjack!\nYou currently have " << Achips << " Chips, and you are level " << Abjlevel << ". Would you like to know the basic rules? (Y/N)\n";
+
       while(Atf == true){
-        std::cin>>rule;
-        if(rule == "Y" || rule == "y"){
-          rule = "Y";
+        std::cin>>Arule;
+        Arule = std::toupper(Arule);
+
+        if(Arule == 'Y'){
+              //List rules...
         }
-        else if(rule = "N" || rule == "n"){
-          rule = "N";
-        }
+        //Removed the elif since it continues either way. --Aiden P
     }
 };
