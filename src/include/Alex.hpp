@@ -5,7 +5,7 @@
 namespace final {
   class Alex{
     public:
-      Alex(bool, bool, int, int, int, int, int, std::string);
+      Alex(bool, bool, int, int, int, int, int, char);
       void rules();
       void hit();
       void stay();
@@ -21,7 +21,7 @@ namespace final {
       int Achips = 50;
       int Abjlevel = 1;
       int Abet;
-      std::string Arule;
+      char Arule;
   };  
 }; // namespace final
 
