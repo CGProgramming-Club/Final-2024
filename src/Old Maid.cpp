@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Deck.hpp"
+#include "..Deck.hpp"
 //add ../include/deck//
 #include <cstdlib>
 
