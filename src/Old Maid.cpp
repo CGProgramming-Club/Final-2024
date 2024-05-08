@@ -1,11 +1,12 @@
 #include <iostream>
-#include "..Deck.hpp"
+#include "include/Deck.hpp"
 //add ../include/deck//
 #include <cstdlib>
+#include "include/Alex.hpp"
+#include "Games.cpp"
 
 
-
-using namespace Deck;
+using namespace final;
 //change namepace to final//
 int main() {
    srand(int(time(NULL)));
@@ -16,6 +17,13 @@ std::string c [2] = {" Class ", " Number "};
 std::string d [2] = {" Class ", " Number "};
 std::string e [2] = {" Class ", " Number "};
 
+
+   std::string f [2] = {" Class ", " Number "};
+   std::string g [2] = {" Class ", " Number "};
+   std::string h [2] = {" Class ", " Number "};
+   std::string i [2] = {" Class ", " Number "};
+   std::string j [2] = {" Class ", " Number "};
+   
 std::string eleven [2] = {"Joker", "Losers"};
 Cards card;
 
@@ -38,7 +46,25 @@ d[1] = card.name();
 e[0] = card.suit();
 e[1] = card.name();
 
-while  (a[0] == b[0] && a[1] == b[1]|| a[0] == c[0] && a[1] == c[1] ){
+
+   f[0] = card.suit();
+   f[1] = card.name();
+
+   g[0] = card.suit();
+   g[1] = card.name();
+
+   h[0] = card.suit();
+   h[1] = card.name();
+
+   i[0] = card.suit();
+   i[1] = card.name();
+
+   j[0] = card.suit();
+   j[1] = card.name();
+
+
+   
+while  (a[0] == b[0] && a[1] == b[1]|| a[0] == c[0] && a[1] == c[1] || a[0] == d[0] && a[1] == d[1] ||a[0] == e[0] && a[1] == e[1] ||b[0] == c[0] && b[1] == c[1] ||b[0] == d[0] && b[1] == d[1] ||b[0] == e[0] && b[1] == e[1] ||c[0] == d[0] && c[1] == d[1] ||c[0] == e[0] && c[1] == e[1] ||d[0] == e[0] && d[1] == e[1]){
 
   a[0] = card.suit();
   a[1] = card.name();
@@ -56,7 +82,33 @@ while  (a[0] == b[0] && a[1] == b[1]|| a[0] == c[0] && a[1] == c[1] ){
   e[1] = card.name();
 };
 
+f[1]=a[1];
+g[1]=b[1];
+h[1]=c[1];
+i[1]=d[1];
+j[1]=e[1];
 
+while (f[1]==a[1] || g[1]==b[1]|| h[1]==c[1] || i[1]==d[1]|| j[1]==e[1]){
 
-std::cout << a[0] + " " + a [1] + " " + b[0] + " " + b[1]; 
+     f[0] = card.suit();
+     
+
+     g[0] = card.suit();
+     
+
+     h[0] = card.suit();
+     
+
+     i[0] = card.suit();
+     
+
+     j[0] = card.suit();     
+}
+
+std::string hand [6] = {"f","g","h","i","j","eleven"};
+o_games.roulette();
+   
+   
+   
+   
 }

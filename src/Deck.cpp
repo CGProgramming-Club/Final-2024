@@ -6,7 +6,7 @@ std::string numbers [13] = {"Ace", "Two", "Three", "Four", "Five", "Six", "Seven
 std::string suits [4] ={"Hearts","Diamonds","Spades","Clubs"};
 
 namespace final {
-
+//put this in your code after main if you use Deck.cpp "srand(int(time(NULL)));"//
 
    std::string Cards::suit(){
      srand(int(time(NULL)));
