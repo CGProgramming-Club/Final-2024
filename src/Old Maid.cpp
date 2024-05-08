@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include "include/Alex.hpp"
 #include "Games.cpp"
-
+#include <algorithm>
 
 using namespace final;
 //change namepace to final//
@@ -26,7 +26,7 @@ std::string e [2] = {" Class ", " Number "};
    
 std::string eleven [2] = {"Joker", "Losers"};
 Cards card;
-
+Games game;
 
 
 std::cout << "Welcome to the Old Maid game, if you don't know how to play, look it up because this is a place for professionals and we don't have time to teach chumps.\n";
@@ -106,7 +106,8 @@ while (f[1]==a[1] || g[1]==b[1]|| h[1]==c[1] || i[1]==d[1]|| j[1]==e[1]){
 }
 
 std::string hand [6] = {"f","g","h","i","j","eleven"};
-o_games.roulette();
+
+random_shuffle(std::begin(a), std::end(a));
    
    
    

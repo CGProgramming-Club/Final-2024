@@ -1,7 +1,6 @@
 #include "include/Games.hpp"
 
 namespace final {
-    class Games {
         int generate_random_number(int minimum, int maximum){
             int random_number = rand() % (maximum - minimum + 1) + minimum;
 
@@ -18,5 +17,4 @@ namespace final {
                 std::cout << icons[generate_random_number(0, sizeof(icons)/sizeof(std::string) - 1)] << "\t\t";
             }
         }
-    };
 }
