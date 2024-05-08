@@ -12,6 +12,7 @@ namespace final {
       void start();
       void scores();
       void bet();
+      void deal();
   
     private:
       bool Agame = true;

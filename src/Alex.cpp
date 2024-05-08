@@ -15,14 +15,14 @@ namespace final {
 
     // }
 
-    Alex::Alex(bool game, bool tf, int pscore, int dscore, int chips, int bjlevel, int bet, char rule){
+    Alex::Alex(bool game, bool tf, int pscore, int dscore, int chips, int bjlevel, int pbet, char rule){
       Agame = game;
       Atf = tf;
       Apscore = pscore;
       Adscore = dscore;
       Achips = chips;
       Abjlevel = bjlevel;
-      Abet = bet;
+      Abet = pbet;
       Arule = rule;
     }
 
@@ -30,13 +30,27 @@ namespace final {
     void Alex::start(){
       std::cout<<"Welcome to Blackjack!\nYou currently have " << Achips << " Chips, and you are level " << Abjlevel << ". Would you like to know the basic rules? (Y/N)\n";
 
-      while(Atf == true){
-        std::cin>>Arule;
-        Arule = std::toupper(Arule);
+  while(Atf == true){
+    std::cin>>Arule;
+      Arule = std::toupper(Arule);
 
-        if(Arule == 'Y'){
-              //List rules...
-        }
-        //Removed the elif since it continues either way. --Aiden P
+      if(Arule == 'Y'){
+          rules();
+      }
+        Atf=false;
     }
-};
+  }
+  void Alex::rules(){
+    std::cout<<"Very well.\nBlackjack is a game that you play against the dealer in an attempt to get as close to 21 points without going over.\nThe game starts by placing a bet and then you get dealt one card.\nif you get a card 2-10, then you get the points that are shown on the card.\nAn ace gives you either a 1 or 11 ponts, decided by the player.\nIf you get a jack, queen, or king, then they are considered 10 points.\nThen a second hand is dealt to all players, expect you cannot see the dealer's second card.\nFinally, you can either decide to stay with your current hand of however many cards you have, or you can choose to \"hit,\" which gives you another card.\nIf you go over 21 points at any time then you lose the game.\nWhen the player chooses to stay, the dealer reveals the cards that he has laid down.\nIf the dealer has a higher amount of point than the player without going over 21, the dealer wins, but if the player has more points without going over 21, the player wins.\n";
+  }
+  void Alex::bet(){
+    std::cout<<"Now that you are ready to start, how many chips would you like to wager?\nKeep in mind: you can only bet up to half of your current chips.\nYou currently have: " << Achips << " chips.\n";
+    while(Atf == false){
+      std::cin>>Abet;
+      if(Abet<Achips/2){
+        
+      }
+    }
+    
+  }
+}
