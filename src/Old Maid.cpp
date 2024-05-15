@@ -88,23 +88,23 @@ h[1]=c[1];
 i[1]=d[1];
 j[1]=e[1];
 
-while (f[1]==a[1] || g[1]==b[1]|| h[1]==c[1] || i[1]==d[1]|| j[1]==e[1]){
+      if (f[1]==a[1] || g[1]==b[1]|| h[1]==c[1] || i[1]==d[1]|| j[1]==e[1]){
+   while (f[0]==a[0] || g[0]==b[0]|| h[0]==c[0] || i[0]==d[0]|| j[0]==e[0]){
+           f[0] = card.suit();
 
-     f[1] = card.suit();
-     
 
-     g[1] = card.suit();
-     
+           g[0] = card.suit();
 
-     h[1] = card.suit();
-     
 
-     i[1] = card.suit();
-     
+           h[0] = card.suit();
 
-     j[1] = card.suit();     
-}
 
+           i[0] = card.suit();
+
+
+           j[0] = card.suit();     
+      }
+      }
 
    
   std::string your_hand [5] = {a[1],b[1],c[1],d[1],e[1]}; 
@@ -119,7 +119,8 @@ while (f[1]==a[1] || g[1]==b[1]|| h[1]==c[1] || i[1]==d[1]|| j[1]==e[1]){
 
    
 random_shuffle(std::begin(hand), std::end(hand));
-
+   
+   std::cout<<"\n You have a" + a[1]+ " of " + b[0] + ", " + b[1]+ " of " + c[0] + ", " + c[1]+ " of " + c[0] + ", " + d[1]+ " of " + d[0] + ", and a " + e[1]+ " of " + e[0] + "\n"; 
 int choice;
    
 while (sizeof(hand)/sizeof(std::string) == 6){
