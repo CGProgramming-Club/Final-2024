@@ -90,19 +90,19 @@ j[1]=e[1];
 
 while (f[1]==a[1] || g[1]==b[1]|| h[1]==c[1] || i[1]==d[1]|| j[1]==e[1]){
 
-     f[0] = card.suit();
+     f[1] = card.suit();
      
 
-     g[0] = card.suit();
+     g[1] = card.suit();
      
 
-     h[0] = card.suit();
+     h[1] = card.suit();
      
 
-     i[0] = card.suit();
+     i[1] = card.suit();
      
 
-     j[0] = card.suit();     
+     j[1] = card.suit();     
 }
 
 
@@ -129,14 +129,13 @@ std::cout << "Pick a card \n 1,2,3,4,5,6\n";
 
    
 std::cin >> choice;
-   if (choice != 1 || 2|| 3|| 4|| 5|| 6){
-   while (choice != 1 || 2|| 3|| 4|| 5|| 6){
+   while (choice != 1 && 2&& 3&& 4&& 5&& 6){
 std::cout << "sorry idiot, thats not one of the options, try typing 1,2,3,4,5,6 \n";
 
 std::cin >> choice;
 
    
-};
+
 };
    
 std::cout << "you pulled a " + hand[choice-1] + "\n"; 
@@ -148,36 +147,5 @@ std::cout << "your opponent gave up since you didn't get the joker, you win";
 
    
 }
-
-if (hand[choice-1]== a[1]){   
-
-   std::string hand.remove [choice-1];
-   std::string your_hand.remove a[1];
-};
-
-if (hand[choice-1]== b[1]){
-
-   std::string hand.remove [choice-1];
-      std::string your_hand.remove b[1];
-};
-if (hand[choice-1]== c[1])   {
-
-      std::string hand.remove [choice-1];
-      std::string your_hand.remove c[1];
-};
-
-
-if (hand[choice-1]== d[1])   {
-
-      std::string hand.remove [choice-1];
-      std::string your_hand.remove d[1];
-};
-
-if (hand[choice-1]== e[1])   {
-
-      std::string hand.remove [choice-1];
-      std::string your_hand.remove e[1];
-};
-   
-   }
+}
 }
