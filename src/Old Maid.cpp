@@ -120,7 +120,7 @@ j[1]=e[1];
    
 random_shuffle(std::begin(hand), std::end(hand));
    
-   std::cout<<"\n You have a" + a[1]+ " of " + b[0] + ", " + b[1]+ " of " + c[0] + ", " + c[1]+ " of " + c[0] + ", " + d[1]+ " of " + d[0] + ", and a " + e[1]+ " of " + e[0] + "\n"; 
+   std::cout<<"\n You have a " + a[1]+ " of " + b[0] + ", " + b[1]+ " of " + c[0] + ", " + c[1]+ " of " + c[0] + ", " + d[1]+ " of " + d[0] + ", and a " + e[1]+ " of " + e[0] + "\n"; 
 int choice;
    
 while (sizeof(hand)/sizeof(std::string) == 6){
