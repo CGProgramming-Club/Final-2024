@@ -140,7 +140,15 @@ std::cin >> choice;
 };
    
 std::cout << "you pulled a " + hand[choice-1] + "\n"; 
+   if (hand[choice-1] == eleven [0]){
+std::cout << "Your opponent called every other card right and you lost";
+   }
+   else {
+std::cout << "your opponent gave up since you didn't get the joker, you win";
+
    
+}
+
 if (hand[choice-1]== a[1]){   
 
    std::string hand.remove [choice-1];
