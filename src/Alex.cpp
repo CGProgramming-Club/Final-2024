@@ -1,6 +1,8 @@
 #include "include/Alex.hpp"
-
+#include "Deck.cpp"
+#include "include/Deck.hpp"
 namespace final {
+  Cards card;
     //   //Unless you wanna make multiple variations of blackjack, I would just recommend a couple functions that allows the player to play blackjack, rather than a whole class. --Aiden P
     // while(game == true){
     // std::cout<<"Welcome to Blackjack!\nYou currently have " << chips << " Chips, and you are level " << bjlevel << ". Would you like to know the basic rules? (Y/N)\n";
@@ -14,7 +16,29 @@ namespace final {
     // int suite = rand() %4+1;
 
     // }
-
+    std::string c1 = "";
+    std::string s1 = "";
+    std::string c2 = "";
+    std::string s2 = "";
+    std::string c3 = "";
+    std::string s3 = "";
+    std::string c4 = "";
+    std::string s4 = "";
+    std::string c5 = "";
+    std::string s5 = "";
+    std::string c6 = "";
+    std::string s6 = "";
+    std::string c7 = "";
+    std::string s7 = "";
+    std::string c8 = "";
+    std::string s8 = "";
+    std::string c9 = "";
+    std::string s9 = "";
+    std::string c10 = "";
+    std::string s10 = "";
+    std::string c11 = "";
+    std::string s11 = "";
+    int cval = 0;
     Alex::Alex(bool game, bool tf, int pscore, int dscore, int chips, int bjlevel, int pbet, char rule){
       Agame = game;
       Atf = tf;
@@ -48,9 +72,27 @@ namespace final {
     while(Atf == false){
       std::cin>>Abet;
       if(Abet<Achips/2){
-        
+        std::cout<<"Very well. You are now betting " << Abet << " chips. Good luck!\n";
+        deal();
+        Atf = true;
+      }
+      else{
+        std::cout<<"Sorry but you don't have enough chips to bet " << Abet << "Chips. please try again.\n";
       }
     }
-    
+  }
+  void Alex::deal(){
+    std::cout<<"Time to deal the first card.\n";
+    c1 = card.name();
+    s1 = card.suit();
+    if(c1 == "Ace"){
+       std::cout<<"Your first card is the " << c1 << " of " << s1 << ", worth either 1 or 11 points.\n which point value would you like to take (type \"1\" or \"11\")\n";
+      std::cin>>cval;
+      if(cval!=1 || cval!=11){
+        std::cout<<"neither option was selected, or there was a mistake has been made.\n 11 has automatically been chosen for your score.\n";
+        cval=11;
+      }
+    }
+    std::cout<<"Your first card is the " << c1 << " of " << s1 << ", worth ";
   }
 }
